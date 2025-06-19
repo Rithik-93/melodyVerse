@@ -67,7 +67,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setIsLoading(true);
     try {
       userLoginSchema.parse({ email, password });
-      const res = await axios.post("http://localhost:3000/api/v1/auth/login", { email, password });
+      const res = await axios.post("https://melodyverse-c7o7.onrender.com/api/v1/auth/login", { email, password });
       const { accessToken: jwt, user: userData } = res.data;
 
       setToken(jwt);
@@ -98,7 +98,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setIsLoading(true);
     try {
       userCreateSchema.parse(userData);
-      const res = await axios.post("http://localhost:3000/api/v1/auth/register", userData);
+      const res = await axios.post("https://melodyverse-c7o7.onrender.com/api/v1/auth/register", userData);
       const { accessToken: jwt, user: userDataRes } = res.data;
       console.log()
       setToken(jwt);
