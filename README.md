@@ -1,6 +1,4 @@
-# Infloso
-
-A full-stack application for … (add a short description of your project here)
+# MelodyVerse
 
 ## 📥 Getting Started
 
