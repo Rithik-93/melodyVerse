@@ -9,10 +9,7 @@ export const app = express();
 
 app.use(helmet());
 app.use(
-  cors({
-    origin: "http://localhost:8080", // allow only this origin
-    credentials: true,
-  })
+  cors()
 );
 
 app.use(express.json());
